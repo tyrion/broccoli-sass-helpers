@@ -14,5 +14,5 @@ $rails-assets-url: "/assets/";
 }
 
 @function image-url($url) {
-  @return url($rails-asset-url + $url);
+  @return url($rails-assets-url + $url);
 }
