@@ -1,6 +1,18 @@
 
 $rails-assets-url: "/assets/";
 
+// FIXME: there are two problems with the current approach of prepending
+// this file to the main stylesheet of the user:
+// 1) If the user is using .sass and not .scss it would not work (I think).
+// 2) we cannot emulate with pure sass asset-data-url.
 @function asset-url($url) {
   @return url($rails-assets-url + $url);
+}
+
+@function font-url($url) {
+  @return url($rails-assets-url + $url);
+}
+
+@function image-url($url) {
+  @return url($rails-asset-url + $url);
 }
